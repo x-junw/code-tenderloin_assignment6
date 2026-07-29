@@ -6,6 +6,18 @@ window.onload = async () => {
     pageReveal();
     await scrambleReveal('#select', 'Select a City.', 250);
     blinkingPeriod();
+    preloadImgs();
+}
+
+// Preloads the Skyline images to avoid load wait times when clicking the points
+function preloadImgs() {
+    Object.entries(imgs).forEach(([key, value]) => {
+        let preload = document.createElement('link');
+        preload.setAttribute('rel', 'preload');
+        preload.setAttribute('href', value);
+        preload.setAttribute('as', 'image');
+        document.querySelector('head').appendChild(preload);
+    })
 }
 
 /* Scrolls back to the Top */
@@ -187,10 +199,4 @@ function infoChange(name, desc, statistics, tcard, tcard_img, dcard, dcard_img) 
         scrambleReveal(`#dcard${i + 1} > h1`, dcard[i]);
         document.querySelector(`#dcard${i + 1} > img`).setAttribute('src', dcard_img[i]);
     }
-}
-
-function renderCityPoints() {
-    cities.hk = new cityElement('hk', [814, 798], '香港 Hong Kong');
-    cities.sh = new cityElement('sh', [943, 563], '上海 Shanghai');
-    cities.ur = new cityElement('ur', [298, 297], '乌鲁木齐 Ürümqi');
 }
