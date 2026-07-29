@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+@keyframes dropIn {
+    0% {
+        background-position: 0% 0%, center -1500px;
+    }
+    100% {
+        background-position: 0% 0%, center;
+    }
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Lexend', Arial, sans-serif;
+}
+
+#map.selectActive {
+    background-image: url('./images/china.png'), var(--selected-link);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 935px, auto 135%;
+    background-position: 0% 0%, center;
+    transition: ease-in-out 0.3s;
+    animation: dropIn ease-in-out 0.6s;
+}
+
+#desc {
+    text-align: center;
+}
+
+#city-name {
+    font-size: 50px;
+}
+
+#city-description {
+    margin: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 25px;
+}
+
+#statistics {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+#statistics div h1, #statistics div h2 {
+    margin: 0;
+}
+
+#statistics div h1 {
+    font-size: 30px;
+}
+
+#statistics div h2 {
+    padding-top: 5px;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+#population {
+    border-right: #555555 solid 1px;
+}
+
+#gdp-per-capita {
+    border-left: #555555 solid 1px;
+}
+
+#sec-list {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#sec-list h1 {
+    font-size: 40px;
+}
+
+#list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+th {
+    width: 50%;
+}
+
+td {
+    width: 50%;
+}
+
+#map {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    background-image: url('./images/china.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 935px;
+    background-position: 0% 0%;
+}
+
+#black-screen {
+    position: fixed;
+    background-color: #000000;
+    width: 100dvw;
+    height: 100dvh;
+    margin: 0;
+    z-index: 100;
+    transition: ease-in-out 0.5s;
+}
+
+#whitespace-fix {
+    width: 100dvw;
+    height: 50px;
+    background-color: #FFFFFF;
+}
+
+.card {
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 #222222;
+    transition: ease-in-out 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 #222222;
+}
+
+.card-img {
+    width: 500px;
+    height: 300px;
+}
+
+.cardh {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 40px !important;
+}
+
+#select {
+    font-size: 50px;
+    font-weight: normal;
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    top: 500px;
+    left: 1200px; 
+    border-width: 2px;
+    text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF;
+}
+
+#info {
+    position: relative;
+    width: 100dvw;
+    z-index: 6;
+    background-color: #FFFFFF;
+}
+
+.point {
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+button.selected {
+    background-color: #0000FF !important;
+}
+
+button.selected:hover {
+    background-color: #000077 !important;
+}
+
+h1.selected {
+    color: #0000FF !important;
+}
+
+h1.point {
+    font-size: 15px;
+    color: #FF0000;
+    z-index: -1;
+    mix-blend-mode: difference;
+    transition: color ease-in-out 0.2s; 
+    transform: translate(-50px, -35px);
+    font-family: 'Lexend', Arial, sans-serif;
+}
+
+button.point {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FF0000;
+    transition: background-color ease-in-out 0.2s; 
+    top: 0;
+    left: 0;
+}
+
+button.point:hover {
+    background-color: #770000;
+}
+
+#back-top-button {
+    border: none;
+    font-family: 'Lexend', Arial, sans-serif;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    width: 500px;
+    height: 75px;
+    transition: ease-in-out 0.3s;
+}
+
+#back-top-button:hover {
+    background-color: #770000;
+}
+
+#bottom {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}

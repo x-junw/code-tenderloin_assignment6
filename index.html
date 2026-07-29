@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cities</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./style.css" />
+        <script>
+            window.addEventListener('wheel', preventDefault, { passive: false });
+            window.addEventListener('touchmove', preventDefault, { passive: false });
+            window.addEventListener('keydown', preventDefaultForScrollKeys, { passive: false });
+
+            
+            const scrollKeys = {
+                32: true,
+                33: true,
+                34: true,
+                35: true,
+                36: true,
+                37: true,
+                38: true,
+                39: true,
+                40: true
+            };
+
+            function preventDefault(event) {
+                event.preventDefault();
+            }
+
+            function preventDefaultForScrollKeys(event) {
+                if (scrollKeys[event.keyCode]) {
+                    preventDefault(event);
+                    return false;
+                }
+            }
+        </script>
+        <script src="./index.js"></script>
+        <script src="./data.js"></script>
+    </head>
+    <body>
+        <div id="black-screen"></div>
+        <div id="map">
+            <h1 id="select">Select a city.</h1>
+        </div>
+        <div id="info">
+            <div id="whitespace-fix"></div>
+            <div id="desc">
+                <h1 id="city-name"></h1>
+                <p id="city-description"></p>
+            </div>
+            <div id="statistics">
+                <div id="population">
+                    <h1>Population</h1>
+                    <h2 id="pop"><h2>
+                </div>
+                <div id="area">
+                    <h1>Area</h1>
+                    <h2 id="ar"><h2>
+                </div>
+                <div id="gdp-per-capita">
+                    <h1>GDP Per Capita</h1>
+                    <h2 id="gdppc"></h2>
+                </div>
+            </div>
+            <div id="sec-list">
+                <h1>Tourist Spots</h1>
+                <div id="list">
+                    <div class="card" id="tcard1">
+                        <h1 class="cardh"></h1>
+                        <img class="card-img"/>
+                    </div>
+                    <div class="card" id="tcard2">
+                        <h1 class="cardh"></h1>
+                        <img class="card-img"/>
+                    </div>
+                    <div class="card" id="tcard3">
+                        <h1 class="cardh"></h1>
+                        <img class="card-img"/>
+                    </div>
+                </div>
+            </div>
+            <div id="sec-list">
+                <h1>Popular Dishes</h1>
+                <div id="list">
+                    <div class="card" id="dcard1">
+                        <h1 class="cardh"></h1>
+                        <img class="card-img"/>
+                    </div>
+                    <div class="card" id="dcard2">
+                        <h1 class="cardh"></h1>
+                        <img class="card-img"/>
+                    </div>
+                    <div class="card" id="dcard3">
+                        <h1 class="cardh"></h1>
+                        <img class="card-img"/>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">
+                <button id="back-top-button" onclick="backToTop()">Back to the Top ↑</button>
+            </div>
+        </div>
+    </body>
+</html>
