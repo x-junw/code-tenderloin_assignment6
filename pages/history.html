@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../public/history.css" />
+        <link rel="stylesheet" href="../public/navbar.css" />
+        <script src="../public/load.js"></script>
+        <title>History</title>
+    </head>
+    <body>
+        <nav onload="animateSelectedPage()">
+        </nav>
+        <div id="map">
+            <h1 id="title">历史 HISTORY</h1>
+        </div>
+        <div id="info">
+            <div id="dyn-section">
+                <h1 id="sec-title">朝 Dynasties</h1>
+                <div class="btn-list">
+                    <button class="dyn" id="xia">夏</button>
+                    <button class="dyn" id="shang">商</button>
+                    <button class="dyn" id="zhou">周</button>
+                    <button class="dyn" id="qin">秦</button>
+                    <button class="dyn" id="han">汉</button>
+                    <button class="dyn" id="tang">唐</button>
+                    <button class="dyn" id="song">宋</button>
+                    <button class="dyn" id="yuan">元</button>
+                    <button class="dyn" id="ming">明</button>
+                    <button class="dyn" id="qing">清</button>
+                </div>
+                <div>
+                    <div id="card-wrapper">
+                        <div class="card">
+                            <img id="dynasty-flag" src="" />
+                            <div id="stats">
+                                <h2 class="dynasty-stat">Selected Dynasty: <span id="dynasty-name"></span></h2>
+                                <h2 class="dynasty-stat" id="time"></h2>
+                                <h2 class="dynasty-stat">Capital: <span id="capital"></span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="desc" id="description"></p>
+                </div>
+            </div>
+            <div id="china-section">
+                <h1 id="sec-title">近期的中国 Recent China</h1>
+                <div class="btn-list">
+                    <button class="two-chinas" id="roc">ROC</button>
+                    <button class="two-chinas" id="prc">PRC</button>
+                    
+                </div>
+                <div>
+                    <div id="card-wrapper">
+                        <div class="card">
+                            <img id="china-flag" src="" />
+                            <div id="stats">
+                                <h2 class="china-stat">Selected: <span id="china-name"></span></h2>
+                                <h2 class="china-stat" id="china-time"></h2>
+                                <h2 class="china-stat">Capital: <span id="china-capital"></span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="desc" id="china-description"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

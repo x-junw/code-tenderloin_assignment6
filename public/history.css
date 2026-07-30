@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+    }
+}
+
+body {
+    font-family: 'Lexend', Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+
+#map {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    background-image: url('../images/china.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: auto 935px;
+    background-position: 50%;
+    animation: slideIn ease-in-out 1s;
+}
+
+#title {
+    font-size: 100px;
+    font-weight: normal;
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    top: 45%;
+    left: 30%; 
+    color: #FFFFFF;
+}
+
+#info {
+    position: relative;
+    width: 100dvw;
+    z-index: 6;
+    background-color: #DDDD22;
+}
+
+#dyn-section {
+    height: 918px;
+    padding-bottom: 100px;
+}
+
+.btn-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+#sec-title {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.dyn, .two-chinas {
+    font-size: 50px;
+    border: none;
+    background-color: #DDDD22;
+    transition: ease-in-out 0.3s;
+    font-weight: bold;
+    overflow: hidden; 
+    border-right: #333333 solid 1px;
+    border-left: #333333 solid 1px;
+}
+
+.two-chinas {
+    height: 100px;
+    width: 200px;
+}
+
+.dyn {
+    width: 100px;
+    height: 100px;
+}
+
+#xia, #roc {
+    border-left: none !important;
+}
+
+#qing, #prc {
+    border-right: none !important;
+}
+
+.dyn:hover, .two-chinas:hover {
+    background-color: #AAAA00;
+}
+
+.dyn:active, .two-chinas:active {
+    background-color: #888800;
+}
+
+.dynasty-stat, .china-stat {
+    text-align: center;
+    margin: 0;
+    font-size: 35px;
+}
+
+.desc {
+    margin: 0;
+    font-size: 25px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 40%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    transition: ease-in-out 0.3s;
+    margin-bottom: 30px;
+    background-color: #EEEEEE;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+#stats {
+    width: 70%;
+}
+
+#dynasty-flag, #china-flag {
+    width: 30%;
+    height: 100%;
+}
+
+#card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#china-section {
+    height: 739px;
+}

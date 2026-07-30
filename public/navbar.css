@@ -1,0 +1,65 @@
+@keyframes navSlideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {}
+}
+
+@keyframes inAndOut {
+    0% {
+        background-color: #2F5A7E00;
+    }
+    50% {
+        background-color: #2F5A7E80;
+    }
+    100% {
+        background-color: #2F5A7E00;
+    }
+}
+
+nav {
+    width: 100dvw;
+    margin: 0;
+    position: fixed;
+    background-color: #222222;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 7.5% 72.5% 20%;
+    animation: navSlideIn ease-in-out 0.5s;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#logo {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+    color: #FF0000;
+}
+
+.selectedClass {
+    background-color: #2F5A7E80;
+    animation: inAndOut 3s infinite;
+    border-radius: 0.5dvw;
+    height: 3dvh;
+    width: 75px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}

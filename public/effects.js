@@ -1,14 +1,5 @@
 const numberFormat = new Intl.NumberFormat("en-US");
 
-window.onload = async () => {
-    await setScroll();
-    renderCityPoints();
-    pageReveal();
-    await scrambleReveal('#select', 'Select a City.', 250);
-    blinkingPeriod();
-    preloadImgs();
-}
-
 // Preloads the Skyline images to avoid load wait times when clicking the points
 function preloadImgs() {
     Object.entries(imgs).forEach(([key, value]) => {
@@ -166,6 +157,9 @@ class cityElement {
             window.removeEventListener('wheel', preventDefault, { passive: false });
             window.removeEventListener('touchmove', preventDefault, { passive: false });
             window.removeEventListener('keydown', preventDefaultForScrollKeys, { passive: false });
+            let nav = document.createElement('nav');
+            nav.innerHTML = `<img id="logo" src="../images/chinas/prc.png" /><div></div><ul><a id="history" href="./history.html"><li>History</li></a><a id="cities" href="./cities.html"><li>Cities</li></a></ul>`;
+            document.body.prepend(nav);
             document.body.style.overflowY = 'auto';
             selected = true;
         }
@@ -174,7 +168,7 @@ class cityElement {
             scrambleReveal('#select', this.displayName);
             infoChange(this.displayName, 
                 city_desc[this.name], 
-                city_stats[this.name], 
+                city_stats[this.name],
                 city_tcard[this.name], 
                 city_tcard_img[this.name], 
                 city_dcard[this.name], 
@@ -199,4 +193,15 @@ function infoChange(name, desc, statistics, tcard, tcard_img, dcard, dcard_img) 
         scrambleReveal(`#dcard${i + 1} > h1`, dcard[i]);
         document.querySelector(`#dcard${i + 1} > img`).setAttribute('src', dcard_img[i]);
     }
+}
+
+// Navbar
+const currentPage = window.location.pathname.split('/').pop().split('.html').shift();
+
+window.onload = () => {
+    animateSelectedPage();
+}
+
+function animateSelectedPage() {
+    document.querySelector(`#${currentPage}`).classList.add('selectedClass');
 }

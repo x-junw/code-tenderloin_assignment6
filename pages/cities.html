@@ -3,39 +3,9 @@
     <head>
         <title>Cities</title>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-        <script>
-            window.addEventListener('wheel', preventDefault, { passive: false });
-            window.addEventListener('touchmove', preventDefault, { passive: false });
-            window.addEventListener('keydown', preventDefaultForScrollKeys, { passive: false });
-
-            
-            const scrollKeys = {
-                32: true,
-                33: true,
-                34: true,
-                35: true,
-                36: true,
-                37: true,
-                38: true,
-                39: true,
-                40: true
-            };
-
-            function preventDefault(event) {
-                event.preventDefault();
-            }
-
-            function preventDefaultForScrollKeys(event) {
-                if (scrollKeys[event.keyCode]) {
-                    preventDefault(event);
-                    return false;
-                }
-            }
-        </script>
-        <script src="./index.js"></script>
-        <script src="./data.js"></script>
+        <link rel="stylesheet" href="../public/cities.css" />
+        <link rel="stylesheet" href="../public/navbar.css" />
+        <script src="../public/load.js"></script>
     </head>
     <body>
         <div id="black-screen"></div>
