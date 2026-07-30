@@ -36,7 +36,8 @@ window.onload = async () => {
         nav.innerHTML = `<img id="logo" src="../images/chinas/prc.png" /><div></div><ul><a id="history" href="./history.html"><li>History</li></a><a id="cities" href="./cities.html"><li>Cities</li></a></ul>`;
         document.body.prepend(nav);
     }
-    await Promise.all([scrollScript(), newScript('../public/effects.js'), newScript('../public/data.js'), newScript(`../public/${cPage}.js`, `onload${cPage}()`)]);
+    await newScript('../public/effects.js');
+    await Promise.all([scrollScript(), newScript('../public/data.js'), newScript(`../public/${cPage}.js`, `onload${cPage}()`)]);
     loadFavicon();
 }
 
