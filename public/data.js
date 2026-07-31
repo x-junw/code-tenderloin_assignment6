@@ -102,7 +102,7 @@ function renderCityPoints() {
     cities.ur = new cityElement('ur', [298, 297], '乌鲁木齐 Ürümqi');
     cities.bj = new cityElement('bj', [814, 362], '北京 Beijing');
     cities.cq = new cityElement('cq', [641, 601], '重庆 Chongqing');
-    cities.lh = new cityElement('lh', [306, 612], '城关区 Lhasa');
+    cities.lh = new cityElement('lh', [306, 612], '拉萨 Lhasa');
     cities.hb = new cityElement('hb', [985, 189], '哈尔滨 Harbin');
     cities.sy = new cityElement('sy', [932, 300], '沈阳 Shenyang');
     cities.xa = new cityElement('xa', [673, 482], "西安 Xi'an");
